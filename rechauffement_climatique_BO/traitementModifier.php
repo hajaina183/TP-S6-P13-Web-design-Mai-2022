@@ -8,6 +8,6 @@
     $contenu = $_POST['contenu'];
     $photo = $_POST['photo'];
     $url = slugify($titre);
-    insertActualite($categorie,$date,$lieu,$titre,$resume,$contenu,$url,$photo);
-    header('Location: index.php?page=ajouter.php');
+
+    
 ?>

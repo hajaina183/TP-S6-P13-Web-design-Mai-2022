@@ -3,6 +3,9 @@
     $page = "";
     if(isset($_GET['page'])) {
         $page = $_GET['page'];
+        if(isset($_GET['id'])) {
+            $id = $_GET['id'];
+        }
     } else {
         $page = "liste.php";
     }

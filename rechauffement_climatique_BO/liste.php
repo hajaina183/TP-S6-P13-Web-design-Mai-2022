@@ -56,7 +56,7 @@
                     <?php foreach ($actualites as $actualite) { ?>
                         <tr>
                             <td><img src="<?php echo "assets/img/" . $actualite['photo'];?>" width="150px"/></td>
-                            <td><?php echo $actualite['titre']; ?></td>
+                            <td><a href="<?php echo "index.php?page=modifier.php&&id=".$actualite['id']; ?>"><?php echo $actualite['titre']; ?></a></td>
                             <td><?php echo $actualite['date']; ?></td>
                             <td><?php echo $actualite['categorie']; ?></td>
                             <td><?php echo $actualite['lieu']; ?></td>

@@ -19,11 +19,32 @@
     }
     
     function insertActualite($categorie,$date,$lieu,$titre,$resume,$contenu,$url,$photo) {   
-        include('myconnex.php'); 
-        $requete = "INSERT INTO actualite (idCategorie, date, idLieu, titre, resume, contenu, url, photo) VALUES 
-                                          (".$categorie.",'".$date.",".$lieu."','".$titre."','".$resume."','".$contenu."','".$url."','".$photo.")";
+        include('connexion.php'); 
+        $requete = "INSERT INTO actualite (idCategorie, date, idLieu, titre, resume, contenu, url, photo) VALUES (".$categorie.",'".$date."',".$lieu.",'".$titre."','".$resume."','".$contenu."','".$url."','".$photo."')";
         $res = $bdd->prepare($requete);
         $exec = $res->execute();
+    }
+
+    function modifierActualite($categorie,$date,$lieu,$titre,$resume,$contenu,$url,$photo,$id) {   
+        include('connexion.php'); 
+        $requete = "UPDATE actualite set idCategorie = ".$categorie.", date='".$date."', idLieu=".$lieu.", titre='".$titre."', resume='".$resume."', contenu='".$contenu."', url='".$url."', photo='".$photo."'";
+        $res = $bdd->prepare($requete);
+        echo $requete;
+        $exec = $res->execute();
+    }
+
+    function getActualite($id) {
+        include('connexion.php'); 
+        $requete = "SELECT * FROM actualite WHERE id = :id";
+        $q = $bdd->prepare($requete);
+        $q->execute(array(":id"=>$id));
+        $q->setFetchMode(PDO::FETCH_ASSOC);
+        $r = $q->fetchAll();
+        $rep = array();
+        foreach($r as $rr) {
+            $rep = $rr;
+        }
+        return $rr;
     }
 
     function slugify($text) {
