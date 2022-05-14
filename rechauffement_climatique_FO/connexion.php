@@ -10,7 +10,7 @@
      $bdd = new PDO($dsn);
      
      if($bdd){
-      echo "Connecté à $dbname avec succès!";
+      //echo "Connecté à $dbname avec succès!";
      }
   }catch (PDOException $e){
      echo $e->getMessage();

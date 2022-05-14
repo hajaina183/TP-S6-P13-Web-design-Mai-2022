@@ -9,5 +9,5 @@
     $photo = $_POST['photo'];
     $url = slugify($titre);
     insertActualite($categorie,$date,$lieu,$titre,$resume,$contenu,$url,$photo);
-    header('Location: index.php?page=ajouter.php');
+    header('Location: acceuil.php?page=ajouter.php');
 ?>

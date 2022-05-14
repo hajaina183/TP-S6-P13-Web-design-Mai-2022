@@ -8,6 +8,7 @@
     $contenu = $_POST['contenu'];
     $photo = $_POST['photo'];
     $url = slugify($titre);
-
-    
+    $id = $_POST['id'];
+    modifierActualite($categorie,$date,$lieu,$titre,$resume,$contenu,$url,$photo,$id);
+    header('Location: acceuil.php');
 ?>
