@@ -3,6 +3,9 @@
     $page = "";
     if(isset($_GET['page'])) {
         $page = $_GET['page'];
+		if(isset($_GET['id'])) {
+            $id = $_GET['id'];
+        }
     } else {
         $page = "information.php";
     }
@@ -11,6 +14,7 @@
   <head>
   	<title>Website menu 09</title>
     <meta charset="utf-8">
+	<base href="http://localhost/s6/TP-S6-P13-Web-design-Mai-2022/rechauffement_climatique_FO/" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,6 +33,9 @@
                     <?php } else if($page == "liste.php") { ?>
                         <li><a href="index.php?page=information.php">Acceuil</a></li>
 					    <li class="colorlib-active"><a href="index.php?page=liste.php">Actualités</a></li>
+                    <?php } else if($page == "fiche.php") { ?>
+                        <li><a href="index.php?page=information.php">Acceuil</a></li>
+					    <li><a href="index.php?page=liste.php">Actualités</a></li>
                     <?php } ?>
 				</ul>
 			</nav>

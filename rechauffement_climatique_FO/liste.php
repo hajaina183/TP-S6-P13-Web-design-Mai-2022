@@ -3,6 +3,7 @@
     $actualites = getActualites();
 ?>
 <link rel="stylesheet" href="assets/css/liste.css">
+<title>Rechauffement Climatique-ITU</title>
 <h1 style="color:#022c5e";>Réchauffement climatique</h1>
 
 <div class="container bcontent">
@@ -16,7 +17,7 @@
                     </div>
                     <div class="col-sm-7">
                         <div class="card-body">
-                            <h3><a href="index.php?page=fiche.php"><?php echo $actualite['titre'];?></a></h3>
+                            <h3><a href="<?php echo slugify($actualite['categorie'])."/".$actualite['url']."-".$actualite['id'].".php";?>"><?php echo $actualite['titre'];?></a></h3>
                             <h5><?php echo $actualite['resume']; ?></h5>
                             <p><?php echo $actualite['contenu']; ?></p>
                         </div>

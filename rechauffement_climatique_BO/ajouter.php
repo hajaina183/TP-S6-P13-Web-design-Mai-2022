@@ -29,7 +29,7 @@
                         <div class="tab-content">
                             <!-- credit card info-->
                             <div id="credit-card" class="tab-pane fade show active pt-3">
-                                <form role="form" action="traitementAjouter.php" method="post">
+                                <form role="form" action="traitementAjouter.php" method="post" enctype="multipart/form-data">
                                     <div class="form-group"> <label for="username">
                                         <h6>Titre</h6>
                                         </label> <input type="text" name="titre" placeholder="Titre" required class="form-control "> 
