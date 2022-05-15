@@ -60,6 +60,23 @@
         return $rep;
     }
 
+    function creerFichier($id,$url) {
+        if (!file_exists($url.".html")) {
+            $actualite = getActualite($id);
+            setlocale(LC_TIME, "fr_FR", "French");
+            $date = utf8_encode(strftime("%d %B %Y", strtotime($actualite['date'])));
+            $nom_file = $url.".html";
+            $contenu = "<title>".$actualite['titre']."</title>
+            <h1 style='color:#022c5e'>".$actualite['titre']."</h1>
+            <img src='../rechauffement_climatique_BO/assets/img/".$actualite['photo']."' class='img-fluid' alt='Responsive image'>
+            <p><i>".$actualite['resume']."</i></p>
+            <h5>".$actualite['contenu']."</h5>";
+            $f = fopen($nom_file, "x+");
+            fputs($f, $contenu);
+            fclose($f);
+        }
+    }
+
     function slugify($text) {
         $divider = '-';
         // replace non letter or digits by divider

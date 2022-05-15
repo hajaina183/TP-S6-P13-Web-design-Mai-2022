@@ -9,6 +9,11 @@
     $photo = $_POST['photo'];
     $url = slugify($titre);
     $id = $_POST['id'];
+    $urlAvant = $_POST['urlAvant'];
+    $fichier = "../rechauffement_climatique_FO/".$urlAvant.".html";
+    if(file_exists($fichier)){
+        unlink($fichier);
+    }
     modifierActualite($categorie,$date,$lieu,$titre,$resume,$contenu,$url,$photo,$id);
     header('Location: acceuil.php');
 ?>

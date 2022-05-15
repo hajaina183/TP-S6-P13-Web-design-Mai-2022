@@ -34,6 +34,7 @@
                                     <div class="form-group"> <label for="username">
                                         <h6>Titre</h6>
                                         <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                        <input type="hidden" name="urlAvant" value="<?php echo $actualite['url']; ?>">
                                         </label> <input type="text" name="titre" value="<?php echo $actualite['titre']; ?>" required class="form-control "> 
                                     </div>
                                     <div class="form-group"> <label for="username">
