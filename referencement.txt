@@ -1,0 +1,8 @@
+avant optimisation
+    note: 98%
+    First Contentful Paint: 0,9 s
+    Speed Index: 1,0 s
+    Largest Contentful Paint: 0,9 s
+    Time to Interactive: 0,9 s
+    Total Blocking Time: 0 ms
+    Cumulative Layout Shift: 0
