@@ -12,7 +12,7 @@
 ?>
 <html lang="en">
   <head>
-  	<title>Website menu 09</title>
+  	<title>Rechauffement Climatique-ITU</title>
     <meta charset="utf-8">
 	<base href="http://rechauf.herokuapp.com/rechauffement_climatique_FO/" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

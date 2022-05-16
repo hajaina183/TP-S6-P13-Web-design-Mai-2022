@@ -6,3 +6,17 @@ avant optimisation
     Time to Interactive: 0,9 s
     Total Blocking Time: 0 ms
     Cumulative Layout Shift: 0
+
+optimisation faites
+    mise en cache dans le navigateur des fichiers css,js
+    mise en cache du coté serveur: création des fichiers html pour les fiches des actualités
+    utilisation de gzip 
+
+après optimisation
+    note: 100%
+    First Contentful Paint: 0,6 s
+    Speed Index: 0,7 s
+    Largest Contentful Paint: 0,6 s
+    Time to Interactive: 0,6 s
+    Total Blocking Time: 0 ms
+    Cumulative Layout Shift: 0
