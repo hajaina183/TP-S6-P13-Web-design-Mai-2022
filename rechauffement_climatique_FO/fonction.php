@@ -77,6 +77,25 @@
         }
     }
 
+    function getUrl() {
+        $u = explode("/",$_SERVER['REQUEST_URI']);
+        $url1 = explode(".",$u[5]);
+        $result = explode("-",$url1[0]);
+        $count = count($result);
+        $v = "";
+        for ($i=0; $i<$count-1; $i++) {
+            $v = $v . "-". $result[$i];
+        }
+        $v = substr($v,1);
+        return $v;
+    }
+
+    function getUrlCategorie() {
+        $u = explode("/",$_SERVER['REQUEST_URI']);
+        $url = $u[4];
+        return $url;
+    }
+
     function slugify($text) {
         $divider = '-';
         // replace non letter or digits by divider
