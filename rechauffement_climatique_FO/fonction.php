@@ -79,7 +79,7 @@
 
     function getUrl() {
         $u = explode("/",$_SERVER['REQUEST_URI']);
-        $url1 = explode(".",$u[5]);
+        $url1 = explode(".",$u[3]);
         $result = explode("-",$url1[0]);
         $count = count($result);
         $v = "";
@@ -92,7 +92,7 @@
 
     function getUrlCategorie() {
         $u = explode("/",$_SERVER['REQUEST_URI']);
-        $url = $u[4];
+        $url = $u[2];
         return $url;
     }
 
