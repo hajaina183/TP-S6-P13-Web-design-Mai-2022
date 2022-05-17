@@ -3,7 +3,6 @@
     $actualites = getActualites();
 ?>
 <link rel="stylesheet" href="assets/css/liste.css">
-<title>Rechauffement Climatique-ITU</title>
 <h1 style="color:#022c5e";>Réchauffement climatique</h1>
 
 <div class="container bcontent">
